@@ -2,6 +2,9 @@
 # Remove "range(2)" junk and replace with dictionaries key=elliptic curve value=MWgroup
 # Further speed improvements are possible with the use of yield statements/generators
 
+# Example:  Bremner's curve y^2 = qx^6 - p can be created with MordellWeilSieve(E,0,1/q) where E is the elliptic 
+# curve y^2=x^3-p*q^2.
+
 # Still to implement:  a=0, removal of "range(2)", generalization of is_quartic_residue(r,p)
 
 class MordellWeilSieve:		

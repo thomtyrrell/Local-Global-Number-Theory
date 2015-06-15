@@ -37,7 +37,7 @@
 # of K divides 6 non-trivially, X cannot have a rational point.  QED
 
 # admissiblePairs(...) will output at most k^2 pairs (p,q) of primes such that the genus 2 curve y^2 = qx^6 - p has no 
-# rational points but local points at all places.  The associated Jacobian is splitJacobian(y^2=x^3-p*q^2,0,1/q)
+# rational points but local points at all places.
 def admissiblePairs(k=1, U=100):
 	p_ = quadClassNumber(6,k,U);
 	for p in p_:
