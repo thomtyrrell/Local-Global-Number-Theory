@@ -9,6 +9,9 @@
 
 # HOW TO USE THIS CODE
 
+# First, we'll need MordellWeilSieve
+import MordellWeilSieve
+
 # To find a curve satisfying the properties (1)-(4) above, you may simply run admissiblePairs().
 # The function will output a pair of primes (p,q), and the curve X : y^2 = qx^6 - p satisfies the 
 # above properties.
@@ -43,7 +46,9 @@ def admissiblePairs(k=1, U=100):
 	for p in p_:
 		q_ = specialPrimes(p,k,U);
 		for q in q_:
-			print (p,q);	
+			J = MordellWeilSieve(EllipticCurve([0,-p*q^2]),0,1/q)
+			if J.positiveRanks:
+				print (p,q);	
 			
 # quadClassNumber(h): with optional arguments
 # Returns a list of primes p <= U such that the class number of the (imaginary) quadratic extension

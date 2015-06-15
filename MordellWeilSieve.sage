@@ -1,11 +1,27 @@
+# This code provides some tools for studying the Brauer-Manin obstruction.  In the preprint 
+# "The Brauer-Manin obstruction for curves", V. Scharaschkin outlines a method/algorithm for computing the Brauer-Manin
+# obstruction set for a curve by intersecting it with the Mordell-Weil group of its Jacobian modulo primes.  We implement
+# a simple case of this algorithm - computing intersections one prime at a time - for curves of genus 2.
+
+# HOW TO USE THIS CODE
+
+# Choose your favorite elliptic curve, two parameters a,d (a!=0), and call MordellWeilSieve(E,a,d).  This will create
+# a genus 2 curve and compute a number of pieces of data associated to its Jacobian.  To begin collecting the intersection
+# data associated to this curve, simply call generateData().  If there are 0 intersections at a prime, this provides a
+# proof that the curve has no rational points.  
+
+# UPDATES
+
 # 5.28.15:  Rewrites need testing:  eliminated loop counters, utilized list comprehension to replace CartesianProduct
 # Remove "range(2)" junk and replace with dictionaries key=elliptic curve value=MWgroup
 # Further speed improvements are possible with the use of yield statements/generators
 
-# Example:  Bremner's curve y^2 = qx^6 - p can be created with MordellWeilSieve(E,0,1/q) where E is the elliptic 
-# curve y^2=x^3-p*q^2.
+# Still to come:  a=0, removal of "range(2)", generalization of is_quartic_residue(r,p)
 
-# Still to implement:  a=0, removal of "range(2)", generalization of is_quartic_residue(r,p)
+# EXAMPLES
+
+# 1. Bremner's curve y^2 = qx^6 - p can be created with MordellWeilSieve(EllipticCurve([0,-p*q^2]),0,1/q).
+# 2. A genus 5 curve y^2 = x^12+... can be made by calling MordellWeilSieve with the option genus=5.
 
 class MordellWeilSieve:		
 	# Given an elliptic curve E: y^2 = f(x) = x^3 + bx + c and rational numbers a,d, we
@@ -19,6 +35,9 @@ class MordellWeilSieve:
 			return None;
 		elif a!=0:
 			print "Not Implemented";
+			return None;
+		if genus!=2 or genus!=5:
+			print "Chosen value of genus not implemented"
 			return None;
 		
 		self.g = genus;
@@ -41,7 +60,9 @@ class MordellWeilSieve:
 		self.ranks = [self.factors[k].rank(only_use_mwrank = false) for k in range(2)];
 		self.torsion = [self.factors[k].torsion_subgroup().points() for k in range(2)];
 		self.gens = [self.factors[k].gens() + self.torsion[k] for k in range(2)];
-				
+		
+		self.positiveRanks = ranks[0]>0 and ranks[1]>0;
+		
 		#See below for a definition.  We run this for initialization purposes.
 		self._clear();
 
