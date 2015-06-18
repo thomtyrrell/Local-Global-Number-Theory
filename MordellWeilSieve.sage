@@ -37,12 +37,11 @@ class MordellWeilSieve:
 		elif a!=0:
 			print "Not Implemented";
 			return None;
-		if genus!=2 or genus!=5:
+		if genus!=2 and genus!=5:
 			print "Chosen value of genus not implemented"
 			return None;
 		
 		self.g = genus;
-		genusHack = lambda g: 1 if g==5 else 2;
 		
 		#Here we record the polynomial f, its coefficients, and the parameters a,d.
 		x,y = PolynomialRing(QQ,2,'xy').gens();
@@ -62,7 +61,7 @@ class MordellWeilSieve:
 		self.torsion = [self.factors[k].torsion_subgroup().points() for k in range(2)];
 		self.gens = [self.factors[k].gens() + self.torsion[k] for k in range(2)];
 		
-		self.positiveRanks = ranks[0]>0 and ranks[1]>0;
+		self.positiveRanks = self.ranks[0]>0 and self.ranks[1]>0;
 		
 		#See below for a definition.  We run this for initialization purposes.
 		self._clear();
@@ -108,7 +107,9 @@ class MordellWeilSieve:
 	#
 	# This could be easily generalized to handle an arbitrary map X -> E.
 	def _is_quartic_residue(self,r):
-		R = r^genusHack(self.g)
+		R = r
+		self.genusHack = 1 if g==5 else 2;
+		if 
 		if Mod(self._p,4)==3:
 			return R.is_square();
 		else:
