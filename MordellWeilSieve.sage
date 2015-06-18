@@ -107,12 +107,12 @@ class MordellWeilSieve:
 	#
 	# This could be easily generalized to handle an arbitrary map X -> E.
 	def _is_quartic_residue(self,r):
-		R = r
-		self.genusHack = 1 if g==5 else 2;
-		if 
 		if Mod(self._p,4)==3:
-			return R.is_square();
+			return r.is_square();
 		else:
+			R=r;
+			if self.genus=2
+				R=r^2;
 			return R^((self._p-1)/4)==1
 
 	# _isPointOnX(R,S)
