@@ -6,3 +6,6 @@ This code implements a construction due to A. Bremner in "Some Interesting Curve
 
 ## MordellWeilSieve.sage
 This code can be used to study the Brauer-Manin Obstruction.
+
+## Modular Forms and Twists of Rank 0.sws
+This sage worksheet breaks down one example in the theory of 3/2 weight modular forms and their relationship to ranks of elliptic curves.
