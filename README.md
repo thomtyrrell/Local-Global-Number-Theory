@@ -8,7 +8,7 @@ This code implements a construction due to A. Bremner in "Some Interesting Curve
 This code can be used to study the Brauer-Manin Obstruction.
 
 ## Modular Forms and Twists of Rank 0.sws
-This sage worksheet breaks down one example in the theory of 3/2-weight modular forms and their relationship to ranks of elliptic curves.  For more information, see "Rank zero quadratic twists of modular elliptic curves" by Ken Ono (http://www.mathcs.emory.edu/~ono/publications-cv/pdfs/014.pdf or http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.550.8285).  
+This sage worksheet breaks down one example in the theory of 3/2-weight modular forms and their relationship to ranks of elliptic curves.  For more information, see <a href=http://www.mathcs.emory.edu/~ono/publications-cv/pdfs/014.pdf>"Rank zero quadratic twists of modular elliptic curves" by Ken Ono</a>.  
 
 ###Planned Additions
 - Sage worksheet (.sws) illustrating the use of MordellWeilSieve.sage
