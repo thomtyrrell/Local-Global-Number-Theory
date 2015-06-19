@@ -9,3 +9,7 @@ This code can be used to study the Brauer-Manin Obstruction.
 
 ## Modular Forms and Twists of Rank 0.sws
 This sage worksheet breaks down one example in the theory of 3/2-weight modular forms and their relationship to ranks of elliptic curves.  
+
+###Planned Additions
+- Sage worksheet (.sws) illustrating the use of MordellWeilSieve.sage
+- References to related papers
