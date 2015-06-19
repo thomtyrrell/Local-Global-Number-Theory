@@ -1,6 +1,5 @@
-# This python code implements a construction due to A. Bremner in
-# "Some Interesting Curves of genus 2 to 7", Journal of Number Theory, 67, 277-290 (1997)
-# of a genus 2 curve with 4 special properties:
+# This python code implements a construction due to A. Bremner
+# of a genus 2 curve with 4 properties:
 # (1) Its Jacobian is isogenous to a product of elliptic curves
 # (2) Each factor of the Jacobian has positive Mordell-Weil rank
 # (3) real points and points modulo every prime
