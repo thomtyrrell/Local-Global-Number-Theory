@@ -4,7 +4,9 @@
 # (2) Each factor of the Jacobian has positive Mordell-Weil rank
 # (3) real points and points modulo every prime
 # (4) no points over the rational numbers.  
-# Such a curve provides a counterexample to the Hasse principle.
+# Such a curve provides a counterexample to the Hasse principle, 
+# and its lack of rational points can be explained by the 
+# Brauer-Manin Obstruction.
 
 # HOW TO USE THIS CODE
 
