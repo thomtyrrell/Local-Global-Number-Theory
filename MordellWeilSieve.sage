@@ -126,7 +126,7 @@ class MordellWeilSieve:
 		else:
 			return  R.xy()[0]*S.xy()[0] == self.dp*self.cp and self._is_quartic_residue(self.dp*R.xy()[0]);
 		
-    # numPointsOnX(p):
+    	# numPointsOnX(p):
 	# Building off of the previous method numPointsOnX(...) counts for a given 
 	# prime how many rational points mod p are in the image of X mod p.
 	#
