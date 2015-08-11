@@ -111,7 +111,7 @@ class MordellWeilSieve:
 			return r.is_square();
 		else:
 			R=r;
-			if self.genus=2
+			if self.g==2:
 				R=r^2;
 			return R^((self._p-1)/4)==1
 
