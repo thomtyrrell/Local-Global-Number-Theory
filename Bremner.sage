@@ -11,7 +11,7 @@
 # HOW TO USE THIS CODE
 
 # First, we'll need MordellWeilSieve
-import MordellWeilSieve
+import mordell_weil_sieve
 
 # To find a curve satisfying the properties (1)-(4) above, you may simply run admissiblePairs().
 # The function will output a pair of primes (p,q), and the curve X : y^2 = qx^6 - p satisfies the 
