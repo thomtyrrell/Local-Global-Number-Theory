@@ -8,7 +8,7 @@ The method general_discriminant(K) takes a number field K as input and returns a
 This code can be used to study the Brauer-Manin Obstruction.  It is an implementation of a "Mordell-Weil Sieve" for some special curves of genus 2.  For more information, see <a href="http://jmilne.org/math/Students/b.pdf">"The Brauer-Manin Obstruction for Curves" by Victor Scharaschkin</a>.
 
 ## bremner.sage
-This code implements a construction due to <a href="http://www.sciencedirect.com/science/article/pii/S0022314X97921892">Andrew Bremner in "Some Interesting Curves of genus 2 to 7"</a>.  Assumes MordellWeilSieve.sage is stored in the same directory.
+This code implements a construction due to <a href="http://www.sciencedirect.com/science/article/pii/S0022314X97921892">Andrew Bremner in "Some Interesting Curves of genus 2 to 7"</a>.  Assumes monogenic_number_fields.sage is stored in the same directory.
 
 ## Modular Forms and Twists of Rank 0.sws
 This sage worksheet breaks down one example in the theory of 3/2-weight modular forms and their relationship to ranks of elliptic curves.  For more information, see <a href=http://www.mathcs.emory.edu/~ono/publications-cv/pdfs/014.pdf>"Rank zero quadratic twists of modular elliptic curves" by Ken Ono</a>.  
